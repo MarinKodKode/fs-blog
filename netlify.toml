@@ -1,0 +1,14 @@
+[build]
+  command = "hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.135.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+# Optional: handle SPA routes or prevent 404 on deep links
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
