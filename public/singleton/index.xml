@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Singletons on Friendly Snippets</title>
+    <link>http://localhost:1313/singleton/</link>
+    <description>Recent content in Singletons on Friendly Snippets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>mhernandezmarin00@gmail.com (Friendly Snippets)</managingEditor>
+    <webMaster>mhernandezmarin00@gmail.com (Friendly Snippets)</webMaster>
+    <copyright>© 2025 Friendly Snippets</copyright>
+    <lastBuildDate>Sat, 06 Sep 2025 10:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/singleton/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Understanding the Singleton Pattern in Swift: A Complete Guide</title>
+      <link>http://localhost:1313/singleton/singleton/</link>
+      <pubDate>Sat, 06 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/singleton/singleton/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

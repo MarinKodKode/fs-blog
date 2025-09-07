@@ -15,15 +15,15 @@ title = "Friendly Snippets"
   # copyright = "Copy, _right?_ :thinking_face:"
 
  [params.author]
-   name = "Manuel Alejandro Hernandez Marin"
+   name = "Friendly Snippets"
    email = "mhernandezmarin00@gmail.com"
    image = "https://avatars.githubusercontent.com/u/229694337?s=400&u=83e4cdf96992303971753b6da52aa28ce89f7aa2&v=4"
    imageQuality = 100
-   headline = "Friendly Snippets"
+   headline = "Share code, share knowledge. Let´s share what we know..."
    bio = "Share code, share knowledge. Let´s share what we know..."
    links = [
-     { email = "friendlysnippets@gmail.com" },
-     { link = "https://friendlysnippets.com/" },
+#     { email = "friendlysnippets@gmail.com" },
+#     { link = "https://friendlysnippets.com/" },
 #     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
 #     { apple = "https://www.apple.com" },
 #     { blogger = "https://username.blogspot.com/" },

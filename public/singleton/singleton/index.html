@@ -1,0 +1,1260 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  <title>Understanding the Singleton Pattern in Swift: A Complete Guide &middot; Friendly Snippets</title>
+    <meta name="title" content="Understanding the Singleton Pattern in Swift: A Complete Guide &middot; Friendly Snippets">
+
+  
+  <meta name="description" content="Learn about the Singleton design pattern in Swift, including implementation, advantages, disadvantages, and best practices with practical examples.">
+  <meta name="keywords" content="Swift,Design Patterns,iOS Development,Singleton,Programming,">
+  
+  
+  <link rel="canonical" href="http://localhost:1313/singleton/singleton/">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.647aec5b4e3b8a5ded024af9f5ce936015dfcb53d3c624139c4b8be5a110bcc001758ebf1194444f89318a7f311b9014ce9e91f86173f7a8e64e401105fa87a1.css"
+    integrity="sha512-ZHrsW047il3tAkr59c6TYBXfy1PTxiQTnEuL5aEQvMABdY6/EZRET4kxin8xG5AUzp6R&#43;GFz96jmTkARBfqHoQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.a187118b41a60744310065c567365de85730c8495301d0ebae41810cc6f7a47432b1de7d4f3b11338959f1ac50c266be6b4b73acf6bf770016eb59b602cc1aa0.js"
+      integrity="sha512-oYcRi0GmB0QxAGXFZzZd6FcwyElTAdDrrkGBDMb3pHQysd59TzsRM4lZ8axQwma&#43;a0tzrPa/dwAW61m2AswaoA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/singleton/singleton/">
+  <meta property="og:site_name" content="Friendly Snippets">
+  <meta property="og:title" content="Understanding the Singleton Pattern in Swift: A Complete Guide">
+  <meta property="og:description" content="Learn about the Singleton design pattern in Swift, including implementation, advantages, disadvantages, and best practices with practical examples.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="singleton">
+    <meta property="article:published_time" content="2025-09-06T10:00:00-06:00">
+    <meta property="article:modified_time" content="2025-09-06T10:00:00-06:00">
+    <meta property="article:tag" content="Swift">
+    <meta property="article:tag" content="Design Patterns">
+    <meta property="article:tag" content="IOS Development">
+    <meta property="article:tag" content="Singleton">
+    <meta property="article:tag" content="Programming">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Understanding the Singleton Pattern in Swift: A Complete Guide">
+  <meta name="twitter:description" content="Learn about the Singleton design pattern in Swift, including implementation, advantages, disadvantages, and best practices with practical examples.">
+
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Singletons",
+    "name": "Understanding the Singleton Pattern in Swift: A Complete Guide",
+    "headline": "Understanding the Singleton Pattern in Swift: A Complete Guide",
+    "description": "Learn about the Singleton design pattern in Swift, including implementation, advantages, disadvantages, and best practices with practical examples.",
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/singleton\/singleton\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Friendly Snippets"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-09-06T10:00:00-06:00",
+    "datePublished": "2025-09-06T10:00:00-06:00",
+    
+    "dateModified": "2025-09-06T10:00:00-06:00",
+    
+    "keywords": ["singleton pattern swift","ios singleton","swift design patterns","singleton implementation"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1219"
+  }]
+  </script>
+
+
+
+  
+  
+    <meta name="author" content="Friendly Snippets">
+  
+  
+    
+      
+        
+          <link href="https://www.facebook.com/share/15iztvUWBm/?mibextid=wwXIfr" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/friendlysnippets" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.instagram.com/friendlysnippets/" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/manuelhem0807" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.threads.com/@friendlysnippets" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.tiktok.com/@friendly.snippets" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://x.com/FriendlySnippet" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.youtube.com/@FriendlySnippets" rel="me">
+        
+      
+    
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 pt-[2px] pr-0 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">
+          Friendly Snippets
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Understanding the Singleton Pattern in Swift: A Complete Guide
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-09-06T10:00:00-06:00">6 September 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1219 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">Understanding the Singleton Pattern in Swift 
+    <div id="understanding-the-singleton-pattern-in-swift" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#understanding-the-singleton-pattern-in-swift" aria-label="Anchor">#</a>
+    </span>        
+    
+</h1>
+<p>The Singleton pattern is one of the most widely recognized design patterns in software development. In Swift, it&rsquo;s commonly used throughout the iOS SDK and many third-party libraries. This comprehensive guide will explore what the Singleton pattern is, how to implement it properly in Swift, and when you should (or shouldn&rsquo;t) use it.</p>
+
+<h2 class="relative group">What is the Singleton Pattern? 
+    <div id="what-is-the-singleton-pattern" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#what-is-the-singleton-pattern" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>The Singleton pattern ensures that a class has only one instance throughout the application&rsquo;s lifetime and provides a global access point to that instance. It&rsquo;s particularly useful for managing shared resources like network managers, database connections, or configuration settings.</p>
+
+<h2 class="relative group">Basic Singleton Implementation in Swift 
+    <div id="basic-singleton-implementation-in-swift" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#basic-singleton-implementation-in-swift" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Here&rsquo;s the most common way to implement a Singleton in Swift:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">NetworkManager</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Static property to hold the single instance</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">NetworkManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Private initializer to prevent external instantiation</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Initialization code here</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;NetworkManager instance created&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">performNetworkRequest</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Performing network request...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Usage</span>
+</span></span><span class="line"><span class="cl"><span class="n">NetworkManager</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">performNetworkRequest</span><span class="p">()</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Thread-Safe Singleton Implementation 
+    <div id="thread-safe-singleton-implementation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#thread-safe-singleton-implementation" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Swift&rsquo;s <code>static let</code> properties are inherently thread-safe and lazy, but if you need more control over initialization, you can use <code>dispatch_once</code> equivalent:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">DatabaseManager</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="n">DatabaseManager</span> <span class="p">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">let</span> <span class="nv">instance</span> <span class="p">=</span> <span class="n">DatabaseManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Additional setup if needed</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">instance</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">setupDatabase</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">setupDatabase</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Setting up database connection&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">saveData</span><span class="p">(</span><span class="kc">_</span> <span class="n">data</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Saving data: </span><span class="si">\(</span><span class="n">data</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Singleton with Configuration 
+    <div id="singleton-with-configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#singleton-with-configuration" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Sometimes you need to configure your Singleton during initialization:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">ConfigurationManager</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">ConfigurationManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">var</span> <span class="nv">apiKey</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">var</span> <span class="nv">baseURL</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="n">apiKey</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">baseURL</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">guard</span> <span class="kc">self</span><span class="p">.</span><span class="n">apiKey</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Warning: Configuration already set&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">apiKey</span> <span class="p">=</span> <span class="n">apiKey</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">baseURL</span> <span class="p">=</span> <span class="n">baseURL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">getAPIKey</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">apiKey</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">getBaseURL</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">baseURL</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Usage</span>
+</span></span><span class="line"><span class="cl"><span class="n">ConfigurationManager</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">configure</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">apiKey</span><span class="p">:</span> <span class="s">&#34;your-api-key&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">baseURL</span><span class="p">:</span> <span class="s">&#34;https://api.example.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Real-World Example: Logger Singleton 
+    <div id="real-world-example-logger-singleton" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#real-world-example-logger-singleton" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Here&rsquo;s a practical example of a logging system using the Singleton pattern:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">Foundation</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Logger</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">Logger</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">queue</span> <span class="p">=</span> <span class="n">DispatchQueue</span><span class="p">(</span><span class="n">label</span><span class="p">:</span> <span class="s">&#34;logger.queue&#34;</span><span class="p">,</span> <span class="n">qos</span><span class="p">:</span> <span class="p">.</span><span class="n">utility</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">dateFormatter</span><span class="p">:</span> <span class="n">DateFormatter</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dateFormatter</span> <span class="p">=</span> <span class="n">DateFormatter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dateFormatter</span><span class="p">.</span><span class="n">dateFormat</span> <span class="p">=</span> <span class="s">&#34;yyyy-MM-dd HH:mm:ss&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">log</span><span class="p">(</span><span class="kc">_</span> <span class="n">message</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="n">LogLevel</span> <span class="p">=</span> <span class="p">.</span><span class="n">info</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">queue</span><span class="p">.</span><span class="n">async</span> <span class="p">{</span> <span class="p">[</span><span class="kr">weak</span> <span class="kc">self</span><span class="p">]</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">            <span class="k">guard</span> <span class="kd">let</span> <span class="nv">self</span> <span class="p">=</span> <span class="kc">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">timestamp</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">dateFormatter</span><span class="p">.</span><span class="n">string</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="n">Date</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">let</span> <span class="nv">logMessage</span> <span class="p">=</span> <span class="s">&#34;[</span><span class="si">\(</span><span class="n">timestamp</span><span class="si">)</span><span class="s">] [</span><span class="si">\(</span><span class="n">level</span><span class="p">.</span><span class="n">rawValue</span><span class="si">)</span><span class="s">] </span><span class="si">\(</span><span class="n">message</span><span class="si">)</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">print</span><span class="p">(</span><span class="n">logMessage</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// Could also write to file, send to analytics, etc.</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">enum</span> <span class="nc">LogLevel</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">CaseIterable</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">debug</span> <span class="p">=</span> <span class="s">&#34;DEBUG&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">info</span> <span class="p">=</span> <span class="s">&#34;INFO&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">warning</span> <span class="p">=</span> <span class="s">&#34;WARNING&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="n">error</span> <span class="p">=</span> <span class="s">&#34;ERROR&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Usage</span>
+</span></span><span class="line"><span class="cl"><span class="n">Logger</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;Application started&#34;</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="p">.</span><span class="n">info</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Logger</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;User logged in&#34;</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="p">.</span><span class="n">debug</span><span class="p">)</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Advantages of the Singleton Pattern 
+    <div id="advantages-of-the-singleton-pattern" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#advantages-of-the-singleton-pattern" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<h3 class="relative group">1. <strong>Controlled Access to Sole Instance</strong> 
+    <div id="1-controlled-access-to-sole-instance" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-controlled-access-to-sole-instance" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>The Singleton pattern ensures that there&rsquo;s only one instance of a class, which is perfect for managing shared resources.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Only one instance exists</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">manager1</span> <span class="p">=</span> <span class="n">NetworkManager</span><span class="p">.</span><span class="n">shared</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">manager2</span> <span class="p">=</span> <span class="n">NetworkManager</span><span class="p">.</span><span class="n">shared</span>
+</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">manager1</span> <span class="p">===</span> <span class="n">manager2</span><span class="p">)</span> <span class="c1">// true - same instance</span>
+</span></span></code></pre></div>
+<h3 class="relative group">2. <strong>Global Access Point</strong> 
+    <div id="2-global-access-point" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#2-global-access-point" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Provides easy access to the instance from anywhere in the application without passing references around.</p>
+
+<h3 class="relative group">3. <strong>Lazy Initialization</strong> 
+    <div id="3-lazy-initialization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#3-lazy-initialization" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>The instance is created only when first accessed, which can save memory and improve startup performance.</p>
+
+<h3 class="relative group">4. <strong>Thread Safety</strong> 
+    <div id="4-thread-safety" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#4-thread-safety" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Swift&rsquo;s <code>static let</code> provides built-in thread safety for Singleton creation.</p>
+
+<h3 class="relative group">5. <strong>Reduced Memory Footprint</strong> 
+    <div id="5-reduced-memory-footprint" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#5-reduced-memory-footprint" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Since only one instance exists, memory usage is optimized for shared resources.</p>
+
+<h2 class="relative group">Disadvantages of the Singleton Pattern 
+    <div id="disadvantages-of-the-singleton-pattern" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#disadvantages-of-the-singleton-pattern" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<h3 class="relative group">1. <strong>Global State Issues</strong> 
+    <div id="1-global-state-issues" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-global-state-issues" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Singletons create global state, which can make code harder to understand and debug.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Hard to track where state changes come from</span>
+</span></span><span class="line"><span class="cl"><span class="n">NetworkManager</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">setBaseURL</span><span class="p">(</span><span class="s">&#34;https://staging.api.com&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Later in code...</span>
+</span></span><span class="line"><span class="cl"><span class="n">NetworkManager</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">setBaseURL</span><span class="p">(</span><span class="s">&#34;https://prod.api.com&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Which one is active? Hard to tell without tracing execution</span>
+</span></span></code></pre></div>
+<h3 class="relative group">2. <strong>Tight Coupling</strong> 
+    <div id="2-tight-coupling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#2-tight-coupling" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Classes using Singletons become tightly coupled to them, making the code less flexible.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">fetchUser</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Tightly coupled to NetworkManager singleton</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NetworkManager</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="kr">get</span><span class="p">(</span><span class="s">&#34;/users/</span><span class="si">\(</span><span class="n">id</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// Handle result</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+<h3 class="relative group">3. <strong>Difficult Unit Testing</strong> 
+    <div id="3-difficult-unit-testing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#3-difficult-unit-testing" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Singletons make unit testing challenging because you can&rsquo;t easily mock or substitute them.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Hard to test because we can&#39;t inject a mock</span>
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">OrderProcessor</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">processOrder</span><span class="p">(</span><span class="kc">_</span> <span class="n">order</span><span class="p">:</span> <span class="n">Order</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Logger</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="s">&#34;Processing order: </span><span class="si">\(</span><span class="n">order</span><span class="p">.</span><span class="n">id</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// How do you verify this log was called in tests?</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+<h3 class="relative group">4. <strong>Hidden Dependencies</strong> 
+    <div id="4-hidden-dependencies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#4-hidden-dependencies" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Dependencies on Singletons are not explicit in method signatures, making them harder to track.</p>
+
+<h3 class="relative group">5. <strong>Violation of Single Responsibility Principle</strong> 
+    <div id="5-violation-of-single-responsibility-principle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#5-violation-of-single-responsibility-principle" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Singletons often end up doing too many things because they&rsquo;re easily accessible.</p>
+
+<h2 class="relative group">Better Alternatives to Consider 
+    <div id="better-alternatives-to-consider" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#better-alternatives-to-consider" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<h3 class="relative group">1. Dependency Injection 
+    <div id="1-dependency-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-dependency-injection" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Instead of using Singletons, consider dependency injection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">protocol</span> <span class="nc">NetworkManagerProtocol</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">performRequest</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">NetworkManager</span><span class="p">:</span> <span class="n">NetworkManagerProtocol</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">performRequest</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Performing network request&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">UserService</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">networkManager</span><span class="p">:</span> <span class="n">NetworkManagerProtocol</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">init</span><span class="p">(</span><span class="n">networkManager</span><span class="p">:</span> <span class="n">NetworkManagerProtocol</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kc">self</span><span class="p">.</span><span class="n">networkManager</span> <span class="p">=</span> <span class="n">networkManager</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">fetchUsers</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">networkManager</span><span class="p">.</span><span class="n">performRequest</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Usage</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">networkManager</span> <span class="p">=</span> <span class="n">NetworkManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">userService</span> <span class="p">=</span> <span class="n">UserService</span><span class="p">(</span><span class="n">networkManager</span><span class="p">:</span> <span class="n">networkManager</span><span class="p">)</span>
+</span></span></code></pre></div>
+<h3 class="relative group">2. Environment Objects (SwiftUI) 
+    <div id="2-environment-objects-swiftui" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#2-environment-objects-swiftui" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>For SwiftUI applications, consider using <code>@EnvironmentObject</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">AppSettings</span><span class="p">:</span> <span class="n">ObservableObject</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="n">Published</span> <span class="kd">var</span> <span class="nv">isDarkMode</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="n">Published</span> <span class="kd">var</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">16.0</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// In your App file</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="n">main</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">MyApp</span><span class="p">:</span> <span class="n">App</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">Scene</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">WindowGroup</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ContentView</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="p">.</span><span class="n">environmentObject</span><span class="p">(</span><span class="n">AppSettings</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// In any view</span>
+</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">SettingsView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">@</span><span class="n">EnvironmentObject</span> <span class="kd">var</span> <span class="nv">settings</span><span class="p">:</span> <span class="n">AppSettings</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Toggle</span><span class="p">(</span><span class="s">&#34;Dark Mode&#34;</span><span class="p">,</span> <span class="n">isOn</span><span class="p">:</span> <span class="err">$</span><span class="n">settings</span><span class="p">.</span><span class="n">isDarkMode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+<h2 class="relative group">When to Use the Singleton Pattern 
+    <div id="when-to-use-the-singleton-pattern" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#when-to-use-the-singleton-pattern" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>The Singleton pattern is appropriate when:</p>
+<ul>
+<li>You need exactly one instance of a class (like a hardware interface)</li>
+<li>The instance needs to be accessible from multiple points in your application</li>
+<li>You&rsquo;re managing a shared resource (like a cache or connection pool)</li>
+<li>The cost of creating multiple instances would be prohibitive</li>
+</ul>
+
+<h2 class="relative group">When NOT to Use the Singleton Pattern 
+    <div id="when-not-to-use-the-singleton-pattern" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#when-not-to-use-the-singleton-pattern" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Avoid Singletons when:</p>
+<ul>
+<li>You need multiple instances with different configurations</li>
+<li>The class has mutable state that could cause race conditions</li>
+<li>You want to write testable code with dependency injection</li>
+<li>The singleton becomes a &ldquo;god object&rdquo; doing too many things</li>
+</ul>
+
+<h2 class="relative group">Best Practices 
+    <div id="best-practices" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#best-practices" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<ol>
+<li><strong>Keep Singletons stateless when possible</strong></li>
+<li><strong>Make initialization thread-safe</strong></li>
+<li><strong>Consider using protocols for better testability</strong></li>
+<li><strong>Document why the Singleton pattern is necessary</strong></li>
+<li><strong>Avoid lazy initialization if the instance will always be needed</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Good: Protocol-based singleton for testability</span>
+</span></span><span class="line"><span class="cl"><span class="kd">protocol</span> <span class="nc">CacheManagerProtocol</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">store</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kc">_</span> <span class="n">object</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">forKey</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">retrieve</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">forKey</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="k">as</span> <span class="n">type</span><span class="p">:</span> <span class="n">T</span><span class="p">.</span><span class="kr">Type</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">T</span><span class="p">?</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">CacheManager</span><span class="p">:</span> <span class="n">CacheManagerProtocol</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="n">CacheManagerProtocol</span> <span class="p">=</span> <span class="n">CacheManager</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">cache</span> <span class="p">=</span> <span class="n">NSCache</span><span class="p">&lt;</span><span class="n">NSString</span><span class="p">,</span> <span class="nb">AnyObject</span><span class="p">&gt;()</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">store</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kc">_</span> <span class="n">object</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="n">forKey</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cache</span><span class="p">.</span><span class="n">setObject</span><span class="p">(</span><span class="n">object</span> <span class="k">as</span> <span class="nb">AnyObject</span><span class="p">,</span> <span class="n">forKey</span><span class="p">:</span> <span class="n">key</span> <span class="k">as</span> <span class="n">NSString</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">retrieve</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="n">forKey</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="k">as</span> <span class="n">type</span><span class="p">:</span> <span class="n">T</span><span class="p">.</span><span class="kr">Type</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">T</span><span class="p">?</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">cache</span><span class="p">.</span><span class="n">object</span><span class="p">(</span><span class="n">forKey</span><span class="p">:</span> <span class="n">key</span> <span class="k">as</span> <span class="n">NSString</span><span class="p">)</span> <span class="k">as</span><span class="p">?</span> <span class="n">T</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Conclusion 
+    <div id="conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#conclusion" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>The Singleton pattern is a powerful tool in Swift development, but it should be used judiciously. While it provides convenient global access and ensures single instance creation, it can lead to tightly coupled, hard-to-test code if overused.</p>
+<p>Consider alternatives like dependency injection, environment objects, or simple static methods before implementing a Singleton. When you do use the pattern, keep your Singletons focused, thread-safe, and well-documented.</p>
+<p>Remember: the best code is often the simplest code that solves your specific problem effectively.</p>
+<hr>
+<p><em>This article covers the Singleton pattern implementation in Swift. For more iOS development patterns and best practices, explore our other articles in the Swift Programming category.</em></p>
+
+          
+          
+          
+        </div>
+        
+          
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4"
+        width="96"
+        height="96"
+        alt="Friendly Snippets"
+        src="/229694337_14035201284901007213_hu_5c4b0c8f83c1cbb1.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Friendly Snippets
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">Share code, share knowledge. Let´s share what we know&hellip;</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.facebook.com/share/15iztvUWBm/?mibextid=wwXIfr"
+          target="_blank"
+          aria-label="Facebook"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/friendlysnippets"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.instagram.com/friendlysnippets/"
+          target="_blank"
+          aria-label="Instagram"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.linkedin.com/in/manuelhem0807"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.threads.com/@friendlysnippets"
+          target="_blank"
+          aria-label="Threads"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+    <path fill="currentColor" d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z"/></svg></span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.tiktok.com/@friendly.snippets"
+          target="_blank"
+          aria-label="Tiktok"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://x.com/FriendlySnippet"
+          target="_blank"
+          aria-label="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.youtube.com/@FriendlySnippets"
+          target="_blank"
+          aria-label="Youtube"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-10"></div>
+  
+
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_singleton/singleton.md"
+          data-oid-likes="likes_singleton/singleton.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0 z-10">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          Friendly Snippets
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

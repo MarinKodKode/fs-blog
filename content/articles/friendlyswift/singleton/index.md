@@ -11,8 +11,6 @@ featured_image: "/images/singleton-pattern-swift.png"
 toc: true
 ---
 
-# Understanding the Singleton Pattern in Swift
-
 The Singleton pattern is one of the most widely recognized design patterns in software development. In Swift, it's commonly used throughout the iOS SDK and many third-party libraries. This comprehensive guide will explore what the Singleton pattern is, how to implement it properly in Swift, and when you should (or shouldn't) use it.
 
 ## What is the Singleton Pattern?

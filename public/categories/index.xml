@@ -6,27 +6,67 @@
     <description>Recent content in Categories on Friendly Snippets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>youremail@example.com (Manuel Marin)</managingEditor>
-    <webMaster>youremail@example.com (Manuel Marin)</webMaster>
-    <copyright>© 2025 Manuel Marin</copyright>
-    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>mhernandezmarin00@gmail.com (Friendly Snippets)</managingEditor>
+    <webMaster>mhernandezmarin00@gmail.com (Friendly Snippets)</webMaster>
+    <copyright>© 2025 Friendly Snippets</copyright>
+    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Ciencia</title>
-      <link>http://localhost:1313/categories/ciencia/</link>
-      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
-      <author>youremail@example.com (Manuel Marin)</author>
-      <guid>http://localhost:1313/categories/ciencia/</guid>
+      <title>IOS</title>
+      <link>http://localhost:1313/categories/ios/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/categories/ios/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Tecnología</title>
-      <link>http://localhost:1313/categories/tecnolog%C3%ADa/</link>
-      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
-      <author>youremail@example.com (Manuel Marin)</author>
-      <guid>http://localhost:1313/categories/tecnolog%C3%ADa/</guid>
+      <title>Swift</title>
+      <link>http://localhost:1313/categories/swift/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/categories/swift/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>http://localhost:1313/categories/tutorial/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/categories/tutorial/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>IOS Development</title>
+      <link>http://localhost:1313/categories/ios-development/</link>
+      <pubDate>Sat, 06 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/categories/ios-development/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Swift Programming</title>
+      <link>http://localhost:1313/categories/swift-programming/</link>
+      <pubDate>Sat, 06 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/categories/swift-programming/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Programación</title>
+      <link>http://localhost:1313/categories/programaci%C3%B3n/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/categories/programaci%C3%B3n/</guid>
       <description></description>
       
     </item>

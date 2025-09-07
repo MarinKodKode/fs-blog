@@ -6,17 +6,37 @@
     <description>Recent content in Articles on Friendly Snippets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>youremail@example.com (Manuel Marin)</managingEditor>
-    <webMaster>youremail@example.com (Manuel Marin)</webMaster>
-    <copyright>© 2025 Manuel Marin</copyright>
-    <atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>mhernandezmarin00@gmail.com (Friendly Snippets)</managingEditor>
+    <webMaster>mhernandezmarin00@gmail.com (Friendly Snippets)</webMaster>
+    <copyright>© 2025 Friendly Snippets</copyright>
+    <lastBuildDate>Sun, 07 Sep 2025 10:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/articles/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>FriendlySwift - De Principiante a Desarrollador iOS | Overview</title>
+      <link>http://localhost:1313/articles/friendlyswift/001overview/</link>
+      <pubDate>Sun, 07 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/articles/friendlyswift/001overview/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/friendlyswift/001overview/featured.png" />
+    </item>
+    
+    <item>
+      <title>Understanding the Singleton Pattern in Swift: A Complete Guide</title>
+      <link>http://localhost:1313/articles/friendlyswift/singleton/</link>
+      <pubDate>Sat, 06 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/articles/friendlyswift/singleton/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/articles/friendlyswift/singleton/featured.png" />
+    </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/articles/ai/whatsia/</link>
+      <link>http://localhost:1313/articles/friendlyai/ai/whatsia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>youremail@example.com (Manuel Marin)</author>
-      <guid>http://localhost:1313/articles/ai/whatsia/</guid>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/articles/friendlyai/ai/whatsia/</guid>
       <description></description>
       
     </item>
