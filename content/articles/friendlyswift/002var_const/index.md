@@ -1,5 +1,5 @@
 ---
-title: "Swift Fundamentals: Understanding Variables and Constants"
+title: "De Principiante a Desarrollador iOS | Variables y Constantes"
 description: "A comprehensive guide to variables and constants in Swift programming. Learn the core concepts of data storage and immutability in iOS development."
 date: 2025-09-07T11:00:00-06:00
 lastmod: 2025-09-07T11:00:00-06:00
@@ -20,23 +20,12 @@ tags:
   - "Software Engineering"
 ---
 
-# Swift Fundamentals: Understanding Variables and Constants
+{{< youtubeLite id="jQK8gNntcYo" label="De Principiante a Desarrollador iOS | Variables y Constantes" >}}
 
-**Part 1 of the Swift Programming Series**
+
 
 In modern software development, understanding how data is stored and manipulated forms the foundation of any robust application. Swift, Apple's programming language for iOS, macOS, and other platforms, provides two primary mechanisms for data storage: variables and constants. This comprehensive guide examines these fundamental concepts and their practical applications in real-world development scenarios.
 
-## Video Tutorial
-
-```html
-<iframe width="100%" height="400" 
-src="https://www.youtube.com/embed/YOUR_VIDEO_ID_VAR_CONST" 
-title="Swift Variables and Constants - Programming Tutorial" 
-frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen>
-</iframe>
-```
 
 ## Learning Objectives
 
@@ -194,111 +183,6 @@ let first_name = "John"        // snake_case (avoid)
 let FirstName = "John"         // PascalCase (for types only)
 ```
 
-## Practical Implementation Examples
-
-### Example 1: User Profile Management
-
-```swift
-// Constants for unchanging user data
-let userId = "user_12345"
-let accountCreationDate = "2023-01-15"
-let membershipTier = "Premium"
-
-// Variables for modifiable user data
-var displayName = "John Developer"
-var profilePictureURL = "https://example.com/avatar.jpg"
-var notificationSettings = true
-
-// Simulating profile updates
-displayName = "John Swift Developer"
-profilePictureURL = "https://example.com/new_avatar.jpg"
-notificationSettings = false
-
-print("User: \(displayName)")
-print("Account ID: \(userId)")
-print("Member since: \(accountCreationDate)")
-```
-
-### Example 2: Financial Calculations
-
-```swift
-// Fixed financial parameters
-let taxRate = 0.25
-let currencyCode = "USD"
-let fiscalYearStart = "2025-01-01"
-
-// Variable financial data
-var grossIncome = 80000.0
-var deductions = 12000.0
-var quarterlyBonus = 0.0
-
-// Calculate taxable income
-quarterlyBonus = 5000.0
-let taxableIncome = grossIncome + quarterlyBonus - deductions
-let taxOwed = taxableIncome * taxRate
-
-print("Taxable Income: \(taxableIncome) \(currencyCode)")
-print("Tax Owed: \(taxOwed) \(currencyCode)")
-```
-
-### Example 3: Application Configuration
-
-```swift
-// System constants
-let applicationName = "DataAnalyzer"
-let buildNumber = "1.2.47"
-let minimumOSVersion = "iOS 15.0"
-
-// Runtime configuration
-var debugMode = false
-var networkTimeout = 30.0
-var cacheSize = 1024
-
-// Development vs. production settings
-#if DEBUG
-debugMode = true
-networkTimeout = 10.0
-cacheSize = 512
-#endif
-
-print("Running \(applicationName) v\(buildNumber)")
-print("Debug Mode: \(debugMode)")
-print("Network Timeout: \(networkTimeout)s")
-```
-
-## Decision Framework: var vs let
-
-Understanding when to use variables versus constants is crucial for writing maintainable Swift code.
-
-### Choose Constants (let) When:
-
-- Values are determined once and never change
-- Working with configuration data
-- Storing mathematical or physical constants
-- Defining identifiers or keys
-- **Default choice**: Start with `let` and change to `var` only when necessary
-
-### Choose Variables (var) When:
-
-- Values need to change during program execution
-- Implementing user interface state
-- Building counters or accumulators
-- Storing user input or calculated results
-
-### Best Practice Principle
-
-**Immutability by Default**: Begin with constants and only introduce mutability when required. This approach leads to safer, more predictable code and helps prevent unintended side effects.
-
-## Advanced Concepts Preview
-
-Future tutorials in this series will explore:
-
-- **Swift Data Types**: Strings, integers, booleans, and type inference
-- **Functions and Methods**: Organizing code into reusable components
-- **Control Flow**: Decision-making and iteration in Swift
-- **Data Structures**: Collections and custom types
-- **Object-Oriented Programming**: Classes, structures, and protocols
-
 ## Key Takeaways
 
 Understanding variables and constants forms the bedrock of Swift programming proficiency. Key principles to remember:
@@ -309,47 +193,6 @@ Understanding variables and constants forms the bedrock of Swift programming pro
 4. **Consistent conventions**: Follow camelCase and community standards
 
 The distinction between mutable and immutable data storage affects not only individual variable behavior but also broader architectural decisions in iOS application development. Mastering these concepts enables developers to write more efficient, maintainable, and error-resistant Swift code.
-
-## Reference Implementation
-
-```swift
-import Foundation
-
-// Production-ready example: User Session Manager
-struct UserSession {
-    // Immutable session identifiers
-    let sessionId: String = UUID().uuidString
-    let creationTime: Date = Date()
-    let userAgent: String = "iOS Swift App 1.0"
-    
-    // Mutable session state
-    var isAuthenticated: Bool = false
-    var lastActivity: Date = Date()
-    var permissions: [String] = []
-    
-    mutating func authenticate(with permissions: [String]) {
-        self.isAuthenticated = true
-        self.permissions = permissions
-        self.lastActivity = Date()
-    }
-    
-    mutating func updateActivity() {
-        self.lastActivity = Date()
-    }
-}
-
-// Usage demonstration
-var session = UserSession()
-print("Session created: \(session.sessionId)")
-
-session.authenticate(with: ["read", "write", "admin"])
-print("Authentication status: \(session.isAuthenticated)")
-print("User permissions: \(session.permissions)")
-```
-
----
-
-**[Return to Course Overview](../overview/)** | **[Next: Swift Functions and Methods](../functions/)**
 
 ## Additional Resources
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Friendly Snippets</title>
+    <link>http://localhost:1313/en/categories/programming/</link>
+    <description>Recent content in Programming on Friendly Snippets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>mhernandezmarin00@gmail.com (Friendly Snippets)</managingEditor>
+    <webMaster>mhernandezmarin00@gmail.com (Friendly Snippets)</webMaster>
+    <copyright>© 2025 Friendly Snippets</copyright>
+    <lastBuildDate>Sun, 07 Sep 2025 13:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/en/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>De Principiante a Desarrollador iOS | Strings: Manipulando texto y soporte unicode</title>
+      <link>http://localhost:1313/en/articles/friendlyswift/004strings/</link>
+      <pubDate>Sun, 07 Sep 2025 13:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/en/articles/friendlyswift/004strings/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/en/articles/friendlyswift/004strings/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>De Principiante a Desarrollador iOS | Tipos de datos en Swift</title>
+      <link>http://localhost:1313/en/articles/friendlyswift/003basicdatatypes/</link>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/en/articles/friendlyswift/003basicdatatypes/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/en/articles/friendlyswift/003basicdatatypes/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>De Principiante a Desarrollador iOS | Variables y Constantes</title>
+      <link>http://localhost:1313/en/articles/friendlyswift/002var_const/</link>
+      <pubDate>Sun, 07 Sep 2025 11:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/en/articles/friendlyswift/002var_const/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/en/articles/friendlyswift/002var_const/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

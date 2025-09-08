@@ -14,12 +14,12 @@
   <meta name="theme-color">
 
   
-  <title>Swift Data Types: Understanding Fundamental Type System &middot; Friendly Snippets</title>
-    <meta name="title" content="Swift Data Types: Understanding Fundamental Type System &middot; Friendly Snippets">
+  <title>De Principiante a Desarrollador iOS | Tipos de datos en Swift &middot; Friendly Snippets</title>
+    <meta name="title" content="De Principiante a Desarrollador iOS | Tipos de datos en Swift &middot; Friendly Snippets">
 
   
-  <meta name="description" content="Comprehensive guide to Swift&#39;s fundamental data types including String, Int, Double, Float, and Bool. Learn type inference, explicit declarations, and best practices for iOS development.">
-  <meta name="keywords" content="Swift,Data Types,Type System,String,Integer,Boolean,Programming Fundamentals,iOS Development,">
+  <meta name="description" content="Introduction to Swift&#39;s type system fundamentals. Learn type inference, explicit type annotations, and the foundation of Swift&#39;s type safety approach.">
+  <meta name="keywords" content="Swift,Data Types,Type System,Type Safety,Programming Fundamentals,iOS Development,">
   
   
   <link rel="canonical" href="http://localhost:1313/articles/friendlyswift/003basicdatatypes/">
@@ -97,8 +97,8 @@
   
   <meta property="og:url" content="http://localhost:1313/articles/friendlyswift/003basicdatatypes/">
   <meta property="og:site_name" content="Friendly Snippets">
-  <meta property="og:title" content="Swift Data Types: Understanding Fundamental Type System">
-  <meta property="og:description" content="Comprehensive guide to Swift&#39;s fundamental data types including String, Int, Double, Float, and Bool. Learn type inference, explicit declarations, and best practices for iOS development.">
+  <meta property="og:title" content="De Principiante a Desarrollador iOS | Tipos de datos en Swift">
+  <meta property="og:description" content="Introduction to Swift&#39;s type system fundamentals. Learn type inference, explicit type annotations, and the foundation of Swift&#39;s type safety approach.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="articles">
@@ -107,16 +107,16 @@
     <meta property="article:tag" content="Swift">
     <meta property="article:tag" content="Data Types">
     <meta property="article:tag" content="Type System">
-    <meta property="article:tag" content="String">
-    <meta property="article:tag" content="Integer">
-    <meta property="article:tag" content="Boolean">
+    <meta property="article:tag" content="Type Safety">
+    <meta property="article:tag" content="Programming Fundamentals">
+    <meta property="article:tag" content="IOS Development">
     <meta property="og:image" content="http://localhost:1313/articles/friendlyswift/003basicdatatypes/featured.jpg">
 
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/articles/friendlyswift/003basicdatatypes/featured.jpg">
-  <meta name="twitter:title" content="Swift Data Types: Understanding Fundamental Type System">
-  <meta name="twitter:description" content="Comprehensive guide to Swift&#39;s fundamental data types including String, Int, Double, Float, and Bool. Learn type inference, explicit declarations, and best practices for iOS development.">
+  <meta name="twitter:title" content="De Principiante a Desarrollador iOS | Tipos de datos en Swift">
+  <meta name="twitter:description" content="Introduction to Swift&#39;s type system fundamentals. Learn type inference, explicit type annotations, and the foundation of Swift&#39;s type safety approach.">
 <meta name="twitter:image" content="http://localhost:1313/articles/friendlyswift/003basicdatatypes/featured.jpg">
     <meta property="og:image" content="http://localhost:1313/articles/friendlyswift/003basicdatatypes/featured.jpg">
   <script type="application/ld+json">
@@ -124,9 +124,9 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Articles",
-    "name": "Swift Data Types: Understanding Fundamental Type System",
-    "headline": "Swift Data Types: Understanding Fundamental Type System",
-    "description": "Comprehensive guide to Swift\u0027s fundamental data types including String, Int, Double, Float, and Bool. Learn type inference, explicit declarations, and best practices for iOS development.",
+    "name": "De Principiante a Desarrollador iOS | Tipos de datos en Swift",
+    "headline": "De Principiante a Desarrollador iOS | Tipos de datos en Swift",
+    "description": "Introduction to Swift\u0027s type system fundamentals. Learn type inference, explicit type annotations, and the foundation of Swift\u0027s type safety approach.",
     
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/articles\/friendlyswift\/003basicdatatypes\/",
@@ -140,10 +140,10 @@
     
     "dateModified": "2025-09-07T12:00:00-06:00",
     
-    "keywords": ["Swift","Data Types","Type System","String","Integer","Boolean","Programming Fundamentals","iOS Development"],
+    "keywords": ["Swift","Data Types","Type System","Type Safety","Programming Fundamentals","iOS Development"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1906"
+    "wordCount": "950"
   }]
   </script>
 
@@ -229,6 +229,20 @@
 
 
 
+
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/lib/lite-youtube-embed/lite-yt-embed.badabc6055b427669bbcf084097334cdf2029c85696c4a56e25239825d3571d26ef82b775ba19032ccd52135ccb412c9ba79da4e9e9b6f3939a6178a5f65ee5d.css"
+    integrity="sha512-utq8YFW0J2abvPCECXM0zfICnIVpbEpW4lI5gl01cdJu&#43;Ct3W6GQMszVITXMtBLJunnaTp6bbzk5pheKX2XuXQ==">
+  
+  
+  <script
+    type="text/javascript"
+    src="/lib/lite-youtube-embed/lite-yt-embed.58a8a22aed9d1cd05780869df4b0d87972fcd144a9eaff8f9a1453e58e6521c5a89ccd80bdb9f48e25ae5ee87b98bd9de51b14dd9988c60e4c89630433292084.js"
+    integrity="sha512-WKiiKu2dHNBXgIad9LDYeXL80USp6v&#43;PmhRT5Y5lIcWonM2Avbn0jiWuXuh7mL2d5RsU3ZmIxg5MiWMEMykghA=="></script>
 
 
 
@@ -691,7 +705,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Swift Data Types: Understanding Fundamental Type System
+        De Principiante a Desarrollador iOS | Tipos de datos en Swift
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -744,7 +758,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-07T12:00:00-06:00">7 September 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1906 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+      <time datetime="2025-09-07T12:00:00-06:00">7 September 2025</time><span class="px-2 text-primary-500">&middot;</span><span>950 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -778,36 +792,10 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          
-<h1 class="relative group">Swift Data Types: Understanding the Fundamental Type System 
-    <div id="swift-data-types-understanding-the-fundamental-type-system" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#swift-data-types-understanding-the-fundamental-type-system" aria-label="Anchor">#</a>
-    </span>        
-    
-</h1>
-<p><strong>Part 2 of the Swift Programming Series</strong></p>
-<p>Type systems form the backbone of modern programming languages, providing structure, safety, and performance optimization. Swift&rsquo;s type system combines the flexibility needed for rapid development with the safety guarantees required for production applications. This comprehensive examination covers Swift&rsquo;s fundamental data types and their practical applications in iOS development.</p>
+          <lite-youtube videoid="jQK8gNntcYo" playlabel="jQK8gNntcYo" params=""></lite-youtube>
 
-<h2 class="relative group">Video Tutorial 
-    <div id="video-tutorial" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#video-tutorial" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;400&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/YOUR_VIDEO_ID_DATA_TYPES&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">title</span><span class="o">=</span><span class="s">&#34;Swift Data Types - Programming Tutorial&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">frameborder</span><span class="o">=</span><span class="s">&#34;0&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">allow</span><span class="o">=</span><span class="s">&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">allowfullscreen</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</span></span></code></pre></div>
+<p>Type systems form the backbone of modern programming languages, providing structure, safety, and performance optimization. Swift&rsquo;s type system combines the flexibility needed for rapid development with the safety guarantees required for production applications. This introduction covers the fundamental concepts that underpin all data types in Swift.</p>
+
 <h2 class="relative group">Learning Objectives 
     <div id="learning-objectives" class="anchor"></div>
     
@@ -819,26 +807,46 @@
 </h2>
 <p>By the end of this tutorial, you will understand:</p>
 <ul>
-<li>Swift&rsquo;s fundamental data types and their characteristics</li>
-<li>The difference between type inference and explicit type annotation</li>
-<li>Precision considerations for numeric types</li>
-<li>String manipulation and Unicode handling</li>
-<li>Boolean logic and conditional operations</li>
-<li>Memory efficiency and performance implications of different types</li>
+<li>What type safety means in Swift programming</li>
+<li>How Swift&rsquo;s type inference system works</li>
+<li>When and why to use explicit type annotations</li>
+<li>The foundation concepts for all Swift data types</li>
+<li>How type safety prevents common programming errors</li>
 </ul>
 
-<h2 class="relative group">Type Safety and Inference 
-    <div id="type-safety-and-inference" class="anchor"></div>
+<h2 class="relative group">Understanding Type Safety 
+    <div id="understanding-type-safety" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#type-safety-and-inference" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#understanding-type-safety" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
-<p>Swift employs a statically typed system that catches errors at compile time while providing convenient type inference to reduce verbose declarations.</p>
+<p>Swift is a statically typed language, meaning that every variable and constant must have a specific type that is determined at compile time. This approach prevents many common runtime errors and enables powerful compiler optimizations.</p>
 
-<h3 class="relative group">Type Inference System 
+<h3 class="relative group">The Benefits of Type Safety 
+    <div id="the-benefits-of-type-safety" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#the-benefits-of-type-safety" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Type safety provides several critical advantages:</p>
+<ul>
+<li><strong>Error Prevention</strong>: Catches type-related errors before your app runs</li>
+<li><strong>Performance Optimization</strong>: Enables compiler optimizations for better performance</li>
+<li><strong>Code Clarity</strong>: Makes code intentions explicit and easier to understand</li>
+<li><strong>Tool Support</strong>: Enables better autocomplete and refactoring in development environments</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Type safety prevents this kind of error:</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">age</span> <span class="p">=</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">name</span> <span class="p">=</span> <span class="s">&#34;John&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// let result = age + name  // Compiler error - cannot add Int and String</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Type Inference System 
     <div id="type-inference-system" class="anchor"></div>
     
     <span
@@ -846,14 +854,47 @@
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#type-inference-system" aria-label="Anchor">#</a>
     </span>        
     
+</h2>
+<p>Swift can automatically determine the type of a variable or constant based on the value you assign to it. This feature, called type inference, reduces code verbosity while maintaining type safety.</p>
+
+<h3 class="relative group">How Type Inference Works 
+    <div id="how-type-inference-works" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#how-type-inference-works" aria-label="Anchor">#</a>
+    </span>        
+    
 </h3>
-<p>Swift can automatically determine types based on initial values, reducing code verbosity while maintaining safety:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">message</span> <span class="p">=</span> <span class="s">&#34;Hello, Swift&#34;</span>        <span class="c1">// Inferred as String</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">count</span> <span class="p">=</span> <span class="mi">42</span>                      <span class="c1">// Inferred as Int</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">price</span> <span class="p">=</span> <span class="mf">29.99</span>                   <span class="c1">// Inferred as Double</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isAvailable</span> <span class="p">=</span> <span class="kc">true</span>              <span class="c1">// Inferred as Bool</span>
+<p>When you declare a variable or constant without specifying a type, Swift examines the initial value and infers the appropriate type:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">message</span> <span class="p">=</span> <span class="s">&#34;Hello, Swift&#34;</span>        <span class="c1">// Swift infers: String</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">count</span> <span class="p">=</span> <span class="mi">42</span>                      <span class="c1">// Swift infers: Int</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">price</span> <span class="p">=</span> <span class="mf">29.99</span>                   <span class="c1">// Swift infers: Double</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isAvailable</span> <span class="p">=</span> <span class="kc">true</span>              <span class="c1">// Swift infers: Bool</span>
 </span></span></code></pre></div>
-<h3 class="relative group">Explicit Type Annotations 
+<h3 class="relative group">Type Inference Rules 
+    <div id="type-inference-rules" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#type-inference-rules" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Swift follows specific rules when inferring types:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Integer literals default to Int</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">wholeNumber</span> <span class="p">=</span> <span class="mi">100</span>               <span class="c1">// Type: Int</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Decimal literals default to Double</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">decimalNumber</span> <span class="p">=</span> <span class="mf">3.14</span>            <span class="c1">// Type: Double</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// String literals are always String</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">text</span> <span class="p">=</span> <span class="s">&#34;Programming&#34;</span>            <span class="c1">// Type: String</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Boolean literals are always Bool</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">flag</span> <span class="p">=</span> <span class="kc">false</span>                    <span class="c1">// Type: Bool</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Explicit Type Annotations 
     <div id="explicit-type-annotations" class="anchor"></div>
     
     <span
@@ -861,557 +902,167 @@
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#explicit-type-annotations" aria-label="Anchor">#</a>
     </span>        
     
-</h3>
-<p>When precision or clarity is required, types can be explicitly declared:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">message</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;Hello, Swift&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">count</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">42</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">price</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">29.99</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isAvailable</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span></code></pre></div>
-<h2 class="relative group">String: Text and Unicode Support 
-    <div id="string-text-and-unicode-support" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#string-text-and-unicode-support" aria-label="Anchor">#</a>
-    </span>        
-    
 </h2>
-<p>Swift&rsquo;s <code>String</code> type provides comprehensive Unicode support and efficient text manipulation capabilities, essential for internationalized applications.</p>
+<p>While type inference is convenient, there are situations where explicitly declaring types is beneficial or necessary.</p>
 
-<h3 class="relative group">Basic String Operations 
-    <div id="basic-string-operations" class="anchor"></div>
+<h3 class="relative group">When to Use Explicit Type Annotations 
+    <div id="when-to-use-explicit-type-annotations" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#basic-string-operations" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#when-to-use-explicit-type-annotations" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">greeting</span> <span class="p">=</span> <span class="s">&#34;Hello&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">name</span> <span class="p">=</span> <span class="s">&#34;Swift Developer&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">welcomeMessage</span> <span class="p">=</span> <span class="n">greeting</span> <span class="o">+</span> <span class="s">&#34;, &#34;</span> <span class="o">+</span> <span class="n">name</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// When you want a specific type different from the default</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">preciseValue</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">=</span> <span class="mf">3.14</span>      <span class="c1">// Float instead of Double</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">smallNumber</span><span class="p">:</span> <span class="nb">Int8</span> <span class="p">=</span> <span class="mi">42</span>          <span class="c1">// Int8 instead of Int</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// String interpolation - preferred method</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">formattedMessage</span> <span class="p">=</span> <span class="s">&#34;Welcome, </span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s">!&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">itemCount</span> <span class="p">=</span> <span class="mi">5</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">inventoryMessage</span> <span class="p">=</span> <span class="s">&#34;Found </span><span class="si">\(</span><span class="n">itemCount</span><span class="si">)</span><span class="s"> items in stock&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// When declaring without immediate initialization</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">userInput</span><span class="p">:</span> <span class="nb">String</span>              <span class="c1">// Will be assigned later</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">itemCount</span><span class="p">:</span> <span class="nb">Int</span>                 <span class="c1">// Will be calculated later</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">formattedMessage</span><span class="p">)</span>        <span class="c1">// &#34;Welcome, Swift Developer!&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">inventoryMessage</span><span class="p">)</span>        <span class="c1">// &#34;Found 5 items in stock&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// For clarity in complex code</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">conversionRate</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">1.2345</span> <span class="c1">// Makes intent clear</span>
 </span></span></code></pre></div>
-<h3 class="relative group">Multiline Strings 
-    <div id="multiline-strings" class="anchor"></div>
+<h3 class="relative group">Syntax for Explicit Type Annotations 
+    <div id="syntax-for-explicit-type-annotations" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#multiline-strings" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#syntax-for-explicit-type-annotations" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>For complex text content, Swift supports multiline string literals:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">sqlQuery</span> <span class="p">=</span> <span class="s">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s">    SELECT user_id, username, email
-</span></span></span><span class="line"><span class="cl"><span class="s">    FROM users
-</span></span></span><span class="line"><span class="cl"><span class="s">    WHERE status = &#39;active&#39;
-</span></span></span><span class="line"><span class="cl"><span class="s">    ORDER BY created_date DESC
-</span></span></span><span class="line"><span class="cl"><span class="s">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">jsonTemplate</span> <span class="p">=</span> <span class="s">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s">    {
-</span></span></span><span class="line"><span class="cl"><span class="s">        &#34;</span><span class="n">name</span><span class="s">&#34;: &#34;</span><span class="err">\</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="s">&#34;,
-</span></span></span><span class="line"><span class="cl"><span class="s">        &#34;</span><span class="n">version</span><span class="s">&#34;: &#34;</span><span class="mf">1.0</span><span class="s">&#34;,
-</span></span></span><span class="line"><span class="cl"><span class="s">        &#34;</span><span class="n">active</span><span class="s">&#34;: </span><span class="si">\(</span><span class="n">isAvailable</span><span class="si">)</span><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s">    }
-</span></span></span><span class="line"><span class="cl"><span class="s">    &#34;&#34;&#34;</span>
-</span></span></code></pre></div>
-<h3 class="relative group">String Properties and Methods 
-    <div id="string-properties-and-methods" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#string-properties-and-methods" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Swift strings provide powerful built-in functionality:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">productName</span> <span class="p">=</span> <span class="s">&#34;MacBook Pro&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Basic properties</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">characterCount</span> <span class="p">=</span> <span class="n">productName</span><span class="p">.</span><span class="bp">count</span>           <span class="c1">// 11</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isEmpty</span> <span class="p">=</span> <span class="n">productName</span><span class="p">.</span><span class="bp">isEmpty</span>                <span class="c1">// false</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">upperCase</span> <span class="p">=</span> <span class="n">productName</span><span class="p">.</span><span class="n">uppercased</span><span class="p">()</span>         <span class="c1">// &#34;MACBOOK PRO&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">lowerCase</span> <span class="p">=</span> <span class="n">productName</span><span class="p">.</span><span class="n">lowercased</span><span class="p">()</span>         <span class="c1">// &#34;macbook pro&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Checking content</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">containsMac</span> <span class="p">=</span> <span class="n">productName</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="s">&#34;Mac&#34;</span><span class="p">)</span>    <span class="c1">// true</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">hasPrefix</span> <span class="p">=</span> <span class="n">productName</span><span class="p">.</span><span class="n">hasPrefix</span><span class="p">(</span><span class="s">&#34;Mac&#34;</span><span class="p">)</span>     <span class="c1">// true</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">hasSuffix</span> <span class="p">=</span> <span class="n">productName</span><span class="p">.</span><span class="n">hasSuffix</span><span class="p">(</span><span class="s">&#34;Pro&#34;</span><span class="p">)</span>     <span class="c1">// true</span>
-</span></span></code></pre></div>
-<h2 class="relative group">Integer Types: Whole Number Precision 
-    <div id="integer-types-whole-number-precision" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#integer-types-whole-number-precision" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>Swift provides multiple integer types to accommodate different precision requirements and memory constraints.</p>
-
-<h3 class="relative group">Standard Integer Type 
-    <div id="standard-integer-type" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#standard-integer-type" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p><code>Int</code> represents the most commonly used integer type, automatically sized for the platform:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">userAge</span> <span class="p">=</span> <span class="mi">28</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">itemQuantity</span> <span class="p">=</span> <span class="mi">150</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">maxConnections</span> <span class="p">=</span> <span class="mi">1000</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Integer arithmetic</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">totalItems</span> <span class="p">=</span> <span class="n">itemQuantity</span> <span class="o">*</span> <span class="mi">2</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">remainingSlots</span> <span class="p">=</span> <span class="n">maxConnections</span> <span class="o">-</span> <span class="mi">750</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">averageAge</span> <span class="p">=</span> <span class="p">(</span><span class="n">userAge</span> <span class="o">+</span> <span class="mi">35</span> <span class="o">+</span> <span class="mi">22</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
-</span></span></code></pre></div>
-<h3 class="relative group">Integer Bounds and Limits 
-    <div id="integer-bounds-and-limits" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#integer-bounds-and-limits" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Understanding integer limitations is crucial for robust applications:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Platform-dependent ranges</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">minInteger</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">.</span><span class="bp">min</span>                    <span class="c1">// -9223372036854775808 (64-bit)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">maxInteger</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">.</span><span class="bp">max</span>                    <span class="c1">// 9223372036854775807 (64-bit)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Safe integer operations</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">largeNumber</span> <span class="p">=</span> <span class="mi">1_000_000</span>                 <span class="c1">// Underscore for readability</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">veryLargeNumber</span> <span class="p">=</span> <span class="mi">1_500_000_000</span>
-</span></span></code></pre></div>
-<h3 class="relative group">Integer Type Variants 
-    <div id="integer-type-variants" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#integer-type-variants" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Swift provides sized integer types for specific use cases:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">smallValue</span><span class="p">:</span> <span class="nb">Int8</span> <span class="p">=</span> <span class="mi">127</span>                  <span class="c1">// -128 to 127</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">mediumValue</span><span class="p">:</span> <span class="nb">Int16</span> <span class="p">=</span> <span class="mi">32_767</span>             <span class="c1">// -32,768 to 32,767</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">largeValue</span><span class="p">:</span> <span class="nb">Int32</span> <span class="p">=</span> <span class="mi">2_147_483_647</span>       <span class="c1">// -2^31 to 2^31-1</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">extraLargeValue</span><span class="p">:</span> <span class="nb">Int64</span> <span class="p">=</span> <span class="mi">9_223_372_036_854_775_807</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Unsigned variants (positive values only)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">positiveSmall</span><span class="p">:</span> <span class="nb">UInt8</span> <span class="p">=</span> <span class="mi">255</span>              <span class="c1">// 0 to 255</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">positiveValue</span><span class="p">:</span> <span class="nb">UInt</span> <span class="p">=</span> <span class="mi">4_294_967_295</span>     <span class="c1">// Platform-dependent</span>
-</span></span></code></pre></div>
-<h2 class="relative group">Floating-Point Types: Decimal Precision 
-    <div id="floating-point-types-decimal-precision" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#floating-point-types-decimal-precision" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>Swift provides two primary floating-point types for decimal number representation, each with different precision characteristics.</p>
-
-<h3 class="relative group">Double: High-Precision Floating Point 
-    <div id="double-high-precision-floating-point" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#double-high-precision-floating-point" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p><code>Double</code> provides 64-bit precision and is Swift&rsquo;s default for decimal numbers:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">scientificConstant</span> <span class="p">=</span> <span class="mf">3.141592653589793</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">measurementData</span> <span class="p">=</span> <span class="mf">45.7834291</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">financialAmount</span> <span class="p">=</span> <span class="mf">1299.99</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Scientific notation</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">avogadroNumber</span> <span class="p">=</span> <span class="mf">6.022e23</span>               <span class="c1">// 6.022 × 10^23</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">planckConstant</span> <span class="p">=</span> <span class="mf">6.626e-34</span>              <span class="c1">// 6.626 × 10^-34</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Mathematical operations</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">radius</span> <span class="p">=</span> <span class="mf">5.0</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">area</span> <span class="p">=</span> <span class="n">scientificConstant</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">radius</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">circumference</span> <span class="p">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">scientificConstant</span> <span class="o">*</span> <span class="n">radius</span>
-</span></span></code></pre></div>
-<h3 class="relative group">Float: Standard Precision 
-    <div id="float-standard-precision" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#float-standard-precision" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p><code>Float</code> uses 32-bit precision, suitable when memory efficiency is prioritized over precision:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">temperature</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">=</span> <span class="mf">23.7</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">humidity</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">=</span> <span class="mf">65.4</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">pressure</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">=</span> <span class="mf">1013.25</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Explicit Float arithmetic</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">heatIndex</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">=</span> <span class="p">(</span><span class="n">temperature</span> <span class="o">+</span> <span class="n">humidity</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
-</span></span></code></pre></div>
-<h3 class="relative group">Precision Considerations 
-    <div id="precision-considerations" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#precision-considerations" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Understanding the precision differences is critical for numerical applications:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Double precision (15-17 decimal digits)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">preciseValue</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">1.234567890123456789</span>
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">preciseValue</span><span class="p">)</span>                         <span class="c1">// 1.234567890123457</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Float precision (6-7 decimal digits)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">lessPreciseValue</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">=</span> <span class="mf">1.234567890123456789</span>
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">lessPreciseValue</span><span class="p">)</span>                     <span class="c1">// 1.2345679</span>
-</span></span></code></pre></div>
-<h2 class="relative group">Boolean: Logical Operations 
-    <div id="boolean-logical-operations" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#boolean-logical-operations" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>Swift&rsquo;s <code>Bool</code> type represents logical true/false values, fundamental for conditional logic and program flow control.</p>
-
-<h3 class="relative group">Boolean Fundamentals 
-    <div id="boolean-fundamentals" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#boolean-fundamentals" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isUserLoggedIn</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">hasPermission</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isDataLoaded</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">networkAvailable</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Boolean expressions</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">canProceed</span> <span class="p">=</span> <span class="n">isUserLoggedIn</span> <span class="o">&amp;&amp;</span> <span class="n">hasPermission</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">shouldRetry</span> <span class="p">=</span> <span class="o">!</span><span class="n">networkAvailable</span> <span class="o">||</span> <span class="o">!</span><span class="n">isDataLoaded</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">readyToDisplay</span> <span class="p">=</span> <span class="n">isDataLoaded</span> <span class="o">&amp;&amp;</span> <span class="n">networkAvailable</span>
-</span></span></code></pre></div>
-<h3 class="relative group">Logical Operations 
-    <div id="logical-operations" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#logical-operations" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Swift provides standard logical operators for boolean manipulation:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">condition1</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">condition2</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// AND operator</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">bothTrue</span> <span class="p">=</span> <span class="n">condition1</span> <span class="o">&amp;&amp;</span> <span class="n">condition2</span>     <span class="c1">// false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// OR operator  </span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">eitherTrue</span> <span class="p">=</span> <span class="n">condition1</span> <span class="o">||</span> <span class="n">condition2</span>   <span class="c1">// true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// NOT operator</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">opposite</span> <span class="p">=</span> <span class="o">!</span><span class="n">condition1</span>                  <span class="c1">// false</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Complex expressions</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">complexCondition</span> <span class="p">=</span> <span class="p">(</span><span class="n">condition1</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">condition2</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">condition2</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">condition1</span><span class="p">)</span>
-</span></span></code></pre></div>
-<h3 class="relative group">Practical Boolean Applications 
-    <div id="practical-boolean-applications" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#practical-boolean-applications" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// User interface state</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isDarkMode</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isTabletDevice</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">hasNetworkConnection</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Feature availability</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">canUploadPhotos</span> <span class="p">=</span> <span class="n">hasNetworkConnection</span> <span class="o">&amp;&amp;</span> <span class="n">isUserLoggedIn</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">showAdvancedFeatures</span> <span class="p">=</span> <span class="n">isUserLoggedIn</span> <span class="o">&amp;&amp;</span> <span class="n">hasPermission</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">useCompactLayout</span> <span class="p">=</span> <span class="o">!</span><span class="n">isTabletDevice</span> <span class="o">||</span> <span class="n">isDarkMode</span>
-</span></span></code></pre></div>
-<h2 class="relative group">Type Conversion and Casting 
-    <div id="type-conversion-and-casting" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#type-conversion-and-casting" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>Swift requires explicit type conversion, preventing accidental data loss and promoting code clarity.</p>
-
-<h3 class="relative group">Numeric Type Conversion 
-    <div id="numeric-type-conversion" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#numeric-type-conversion" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">integerValue</span> <span class="p">=</span> <span class="mi">42</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">decimalValue</span> <span class="p">=</span> <span class="mf">3.14159</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Explicit conversion required</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">convertedInteger</span> <span class="p">=</span> <span class="nb">Double</span><span class="p">(</span><span class="n">integerValue</span><span class="p">)</span>     <span class="c1">// 42.0</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">convertedDecimal</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">(</span><span class="n">decimalValue</span><span class="p">)</span>        <span class="c1">// 3 (truncated)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Safe conversion with precision awareness</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">preciseCalculation</span> <span class="p">=</span> <span class="n">convertedInteger</span> <span class="o">*</span> <span class="n">decimalValue</span>
-</span></span></code></pre></div>
-<h3 class="relative group">String Conversion 
-    <div id="string-conversion" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#string-conversion" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<p>Converting between strings and numeric types requires careful error handling:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">numberString</span> <span class="p">=</span> <span class="s">&#34;123&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">invalidString</span> <span class="p">=</span> <span class="s">&#34;abc&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// String to number conversion</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">convertedNumber</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">(</span><span class="n">numberString</span><span class="p">)</span>         <span class="c1">// Optional(123)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">invalidConversion</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">(</span><span class="n">invalidString</span><span class="p">)</span>      <span class="c1">// nil</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Number to string conversion</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">ageString</span> <span class="p">=</span> <span class="nb">String</span><span class="p">(</span><span class="n">userAge</span><span class="p">)</span>                 <span class="c1">// &#34;28&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">priceString</span> <span class="p">=</span> <span class="nb">String</span><span class="p">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&#34;%.2f&#34;</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span> <span class="c1">// &#34;29.99&#34;</span>
-</span></span></code></pre></div>
-<h2 class="relative group">Practical Implementation Examples 
-    <div id="practical-implementation-examples" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#practical-implementation-examples" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-
-<h3 class="relative group">Example 1: User Profile System 
-    <div id="example-1-user-profile-system" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#example-1-user-profile-system" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// User profile data with appropriate types</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">userId</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">12345</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">username</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;swift_developer&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">emailAddress</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;developer@example.com&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">accountBalance</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">1547.32</span>
+<p>The syntax for explicit type annotation follows this pattern:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">identifier</span><span class="p">:</span> <span class="n">TypeName</span> <span class="p">=</span> <span class="n">value</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">identifier</span><span class="p">:</span> <span class="n">TypeName</span> <span class="p">=</span> <span class="n">value</span>
+</span></span></code></pre></div><p>Examples in practice:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">userName</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;developer&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">userAge</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">28</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">accountBalance</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">1500.75</span>
 </span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isPremiumMember</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">loginAttempts</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Profile validation</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isValidUser</span> <span class="p">=</span> <span class="o">!</span><span class="n">username</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="o">&amp;&amp;</span> <span class="n">emailAddress</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="s">&#34;@&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">hasPositiveBalance</span> <span class="p">=</span> <span class="n">accountBalance</span> <span class="o">&gt;</span> <span class="mf">0.0</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">accountStatus</span> <span class="p">=</span> <span class="n">isPremiumMember</span> <span class="p">?</span> <span class="s">&#34;Premium&#34;</span> <span class="p">:</span> <span class="s">&#34;Standard&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;User </span><span class="si">\(</span><span class="n">username</span><span class="si">)</span><span class="s"> (</span><span class="si">\(</span><span class="n">accountStatus</span><span class="si">)</span><span class="s">) has balance: $</span><span class="si">\(</span><span class="n">accountBalance</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
 </span></span></code></pre></div>
-<h3 class="relative group">Example 2: Scientific Calculations 
-    <div id="example-2-scientific-calculations" class="anchor"></div>
+<h2 class="relative group">Swift&rsquo;s Fundamental Data Types 
+    <div id="swifts-fundamental-data-types" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#example-2-scientific-calculations" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#swifts-fundamental-data-types" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Swift provides several built-in types that serve as the foundation for all data representation:</p>
+
+<h3 class="relative group">The Core Types 
+    <div id="the-core-types" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#the-core-types" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Physical constants and measurements</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">speedOfLight</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">299_792_458.0</span>        <span class="c1">// meters per second</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">gravitationalConstant</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">6.674e-11</span>   <span class="c1">// N⋅m²/kg²</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">planckConstant</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">6.626e-34</span>          <span class="c1">// J⋅Hz⁻¹</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// String - for text and characters</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">applicationName</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;MyApp&#34;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Experimental data</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">experimentalMass</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">0.000549</span>        <span class="c1">// atomic mass units</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">observedFrequency</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">4.57e14</span>        <span class="c1">// Hz</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">measurementCount</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">1000</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Int - for whole numbers</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">maxUsers</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">1000</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Energy calculation using Planck&#39;s equation</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">photonEnergy</span> <span class="p">=</span> <span class="n">planckConstant</span> <span class="o">*</span> <span class="n">observedFrequency</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isHighEnergyPhoton</span> <span class="p">=</span> <span class="n">photonEnergy</span> <span class="o">&gt;</span> <span class="mf">1.0e-18</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Double - for decimal numbers (default for decimals)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">version</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">2.1</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;Photon energy: </span><span class="si">\(</span><span class="n">photonEnergy</span><span class="si">)</span><span class="s"> Joules&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="s">&#34;High energy classification: </span><span class="si">\(</span><span class="n">isHighEnergyPhoton</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Bool - for true/false values</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isActive</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">true</span>
 </span></span></code></pre></div>
-<h3 class="relative group">Example 3: Application Configuration 
-    <div id="example-3-application-configuration" class="anchor"></div>
+<h3 class="relative group">Type Consistency 
+    <div id="type-consistency" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#example-3-application-configuration" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#type-consistency" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Configuration parameters with mixed types</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">applicationName</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;DataProcessor&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">versionNumber</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;2.1.4&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">maxThreads</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">8</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">cacheTimeout</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">300.5</span>               <span class="c1">// seconds</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">debugMode</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">compressionRatio</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">=</span> <span class="mf">0.85</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Runtime calculations</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">threadUtilization</span> <span class="p">=</span> <span class="nb">Double</span><span class="p">(</span><span class="n">maxThreads</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.75</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">cacheTimeoutMinutes</span> <span class="p">=</span> <span class="n">cacheTimeout</span> <span class="o">/</span> <span class="mf">60.0</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">effectiveCompression</span> <span class="p">=</span> <span class="nb">Double</span><span class="p">(</span><span class="n">compressionRatio</span><span class="p">)</span> <span class="o">*</span> <span class="mf">100.0</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Status reporting</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">statusMessage</span> <span class="p">=</span> <span class="s">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s">    Application: </span><span class="si">\(</span><span class="n">applicationName</span><span class="si">)</span><span class="s"> v</span><span class="si">\(</span><span class="n">versionNumber</span><span class="si">)</span><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s">    Thread Utilization: </span><span class="si">\(</span><span class="n">threadUtilization</span><span class="si">)</span><span class="s"> cores
-</span></span></span><span class="line"><span class="cl"><span class="s">    Cache Timeout: </span><span class="si">\(</span><span class="n">cacheTimeoutMinutes</span><span class="si">)</span><span class="s"> minutes
-</span></span></span><span class="line"><span class="cl"><span class="s">    Compression: </span><span class="si">\(</span><span class="n">effectiveCompression</span><span class="si">)</span><span class="s">%
-</span></span></span><span class="line"><span class="cl"><span class="s">    Debug Mode: </span><span class="si">\(</span><span class="n">debugMode</span> <span class="p">?</span> <span class="s">&#34;Enabled&#34;</span> <span class="p">:</span> <span class="s">&#34;Disabled&#34;</span><span class="si">)</span><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s">    &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">statusMessage</span><span class="p">)</span>
+<p>Once a type is established (either through inference or annotation), it cannot be changed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">counter</span> <span class="p">=</span> <span class="mi">0</span>                     <span class="c1">// Type: Int</span>
+</span></span><span class="line"><span class="cl"><span class="n">counter</span> <span class="p">=</span> <span class="mi">10</span>                        <span class="c1">// Valid - same type</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// counter = &#34;ten&#34;                  // Error - cannot change type</span>
 </span></span></code></pre></div>
-<h2 class="relative group">Performance and Memory Considerations 
-    <div id="performance-and-memory-considerations" class="anchor"></div>
+<h2 class="relative group">Best Practices 
+    <div id="best-practices" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#performance-and-memory-considerations" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#best-practices" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 
-<h3 class="relative group">Type Selection Guidelines 
-    <div id="type-selection-guidelines" class="anchor"></div>
+<h3 class="relative group">When to Use Type Inference 
+    <div id="when-to-use-type-inference" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#type-selection-guidelines" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#when-to-use-type-inference" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>Choosing appropriate types affects both performance and memory usage:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Memory-efficient choices for large datasets</span>
-</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">SensorReading</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="nb">Double</span>           <span class="c1">// High precision needed</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">temperature</span><span class="p">:</span> <span class="nb">Float</span>          <span class="c1">// Lower precision acceptable</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">humidity</span><span class="p">:</span> <span class="nb">UInt8</span>             <span class="c1">// 0-100%, small range</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">isValid</span><span class="p">:</span> <span class="nb">Bool</span>              <span class="c1">// Minimal memory footprint</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Performance-critical calculations</span>
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">processLargeDataset</span><span class="p">(</span><span class="n">readings</span><span class="p">:</span> <span class="p">[</span><span class="n">SensorReading</span><span class="p">])</span> <span class="p">-&gt;</span> <span class="nb">Double</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">sum</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">0.0</span>           <span class="c1">// Double for accumulation precision</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">count</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">0</span>              <span class="c1">// Int for counting</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">reading</span> <span class="k">in</span> <span class="n">readings</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">reading</span><span class="p">.</span><span class="n">isValid</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">sum</span> <span class="o">+=</span> <span class="nb">Double</span><span class="p">(</span><span class="n">reading</span><span class="p">.</span><span class="n">temperature</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="bp">count</span> <span class="o">+=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="bp">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">?</span> <span class="n">sum</span> <span class="o">/</span> <span class="nb">Double</span><span class="p">(</span><span class="bp">count</span><span class="p">)</span> <span class="p">:</span> <span class="mf">0.0</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
-<h2 class="relative group">Best Practices and Recommendations 
-    <div id="best-practices-and-recommendations" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#best-practices-and-recommendations" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-
-<h3 class="relative group">Type Selection Strategy 
-    <div id="type-selection-strategy" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#type-selection-strategy" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<ol>
-<li><strong>Use type inference</strong> when the type is obvious from context</li>
-<li><strong>Explicitly declare types</strong> when precision or clarity is important</li>
-<li><strong>Prefer <code>Double</code> over <code>Float</code></strong> unless memory constraints require optimization</li>
-<li><strong>Use <code>Int</code> for counters and indices</strong> rather than specific-sized variants</li>
-<li><strong>Validate string-to-number conversions</strong> to handle potential failures</li>
-</ol>
-
-<h3 class="relative group">Code Organization 
-    <div id="code-organization" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#code-organization" aria-label="Anchor">#</a>
-    </span>        
-    
-</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Group related type declarations</span>
-</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">UserPreferences</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">theme</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;dark&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">fontSize</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">14.0</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">notificationsEnabled</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">refreshInterval</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">300</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Use meaningful names that indicate expected types</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">maximumRetryCount</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">3</span>                  <span class="c1">// Clear integer expectation</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">connectionTimeoutSeconds</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">30.0</span>     <span class="c1">// Clear decimal expectation  </span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isProductionEnvironment</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">false</span>       <span class="c1">// Clear boolean expectation</span>
-</span></span></code></pre></div>
-<h2 class="relative group">Advanced Concepts Preview 
-    <div id="advanced-concepts-preview" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#advanced-concepts-preview" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<p>Future tutorials in this series will explore:</p>
+<p>Use type inference when:</p>
 <ul>
-<li><strong>Swift Functions and Methods</strong>: Parameter types and return values</li>
-<li><strong>Collections</strong>: Arrays, dictionaries, and sets with typed elements</li>
-<li><strong>Optional Types</strong>: Handling absence of values safely</li>
-<li><strong>Custom Types</strong>: Structures, classes, and enumerations</li>
-<li><strong>Generic Programming</strong>: Type-safe flexible code patterns</li>
+<li>The type is obvious from the context</li>
+<li>You&rsquo;re using standard default types</li>
+<li>Code remains clear and readable</li>
 </ul>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Good use of type inference</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">username</span> <span class="p">=</span> <span class="s">&#34;john_doe&#34;</span>           <span class="c1">// Obviously a String</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">itemCount</span> <span class="p">=</span> <span class="mi">42</span>                  <span class="c1">// Obviously an Int</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">isLoggedIn</span> <span class="p">=</span> <span class="kc">false</span>              <span class="c1">// Obviously a Bool</span>
+</span></span></code></pre></div>
+<h3 class="relative group">When to Use Explicit Types 
+    <div id="when-to-use-explicit-types" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#when-to-use-explicit-types" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Use explicit type annotations when:</p>
+<ul>
+<li>You need a specific type variant</li>
+<li>The variable is declared without initialization</li>
+<li>Clarity is important for complex code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// Good use of explicit types</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">precision</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">=</span> <span class="mf">3.14</span>         <span class="c1">// Want Float, not Double</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">result</span><span class="p">:</span> <span class="nb">String</span>                  <span class="c1">// Will assign later</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">timeout</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mi">30</span>            <span class="c1">// Clarity for configuration</span>
+</span></span></code></pre></div>
+<h2 class="relative group">Error Prevention Through Type Safety 
+    <div id="error-prevention-through-type-safety" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#error-prevention-through-type-safety" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Type safety helps prevent common programming errors:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="c1">// These would cause compile-time errors:</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">age</span> <span class="p">=</span> <span class="mi">25</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">name</span> <span class="p">=</span> <span class="s">&#34;Alice&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Error: Cannot convert value of type &#39;String&#39; to expected argument type &#39;Int&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// let result = age + name</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Error: Cannot assign value of type &#39;String&#39; to type &#39;Int&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// age = &#34;twenty-five&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Correct approach requires explicit intention:</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">ageString</span> <span class="p">=</span> <span class="nb">String</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>         <span class="c1">// Convert Int to String</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">message</span> <span class="p">=</span> <span class="s">&#34;Age: &#34;</span> <span class="o">+</span> <span class="n">ageString</span>   <span class="c1">// Now we can concatenate</span>
+</span></span></code></pre></div>
 <h2 class="relative group">Key Takeaways 
     <div id="key-takeaways" class="anchor"></div>
     
@@ -1421,80 +1072,18 @@
     </span>        
     
 </h2>
-<p>Swift&rsquo;s type system provides a foundation for safe, efficient programming:</p>
 <ol>
-<li><strong>Type safety prevents runtime errors</strong> through compile-time checking</li>
-<li><strong>Type inference reduces verbosity</strong> while maintaining clarity</li>
-<li><strong>Explicit conversions prevent data loss</strong> and clarify intent</li>
-<li><strong>Appropriate type selection impacts performance</strong> and memory usage</li>
-<li><strong>String interpolation provides clean, readable formatting</strong></li>
+<li><strong>Type safety prevents runtime errors</strong> by catching mistakes at compile time</li>
+<li><strong>Type inference reduces verbosity</strong> while maintaining safety</li>
+<li><strong>Explicit type annotations provide control</strong> when specific types are needed</li>
+<li><strong>Consistency is enforced</strong> - types cannot change after declaration</li>
+<li><strong>Swift&rsquo;s type system balances safety and convenience</strong> for productive development</li>
 </ol>
-<p>Understanding these fundamental types enables developers to make informed decisions about data representation, leading to more robust and efficient Swift applications.</p>
-
-<h2 class="relative group">Reference Implementation 
-    <div id="reference-implementation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#reference-implementation" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="line"><span class="cl"><span class="kd">import</span> <span class="nc">Foundation</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Comprehensive example demonstrating all fundamental types</span>
-</span></span><span class="line"><span class="cl"><span class="kd">struct</span> <span class="nc">DataAnalytics</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// String properties for identification</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">analysisId</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="n">UUID</span><span class="p">().</span><span class="n">uuidString</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nv">datasetName</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;UserBehaviorMetrics&#34;</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="c1">// Numeric properties for calculations</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">sampleCount</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">averageSessionDuration</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">0.0</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">conversionRate</span><span class="p">:</span> <span class="nb">Float</span> <span class="p">=</span> <span class="mf">0.0</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="c1">// Boolean properties for state management</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">isProcessingComplete</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nv">hasValidData</span><span class="p">:</span> <span class="nb">Bool</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="kr">mutating</span> <span class="kd">func</span> <span class="nf">processDataset</span><span class="p">(</span><span class="n">sessions</span><span class="p">:</span> <span class="p">[</span><span class="nb">Double</span><span class="p">])</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">guard</span> <span class="o">!</span><span class="n">sessions</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="n">hasValidData</span> <span class="p">=</span> <span class="kc">false</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="n">sampleCount</span> <span class="p">=</span> <span class="n">sessions</span><span class="p">.</span><span class="bp">count</span>
-</span></span><span class="line"><span class="cl">        <span class="n">averageSessionDuration</span> <span class="p">=</span> <span class="n">sessions</span><span class="p">.</span><span class="bp">reduce</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="o">+</span><span class="p">)</span> <span class="o">/</span> <span class="nb">Double</span><span class="p">(</span><span class="n">sessions</span><span class="p">.</span><span class="bp">count</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">conversionRate</span> <span class="p">=</span> <span class="nb">Float</span><span class="p">(</span><span class="n">sessions</span><span class="p">.</span><span class="bp">filter</span> <span class="p">{</span> <span class="nv">$0</span> <span class="o">&gt;</span> <span class="mf">60.0</span> <span class="p">}.</span><span class="bp">count</span><span class="p">)</span> <span class="o">/</span> <span class="nb">Float</span><span class="p">(</span><span class="n">sessions</span><span class="p">.</span><span class="bp">count</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="n">hasValidData</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">        <span class="n">isProcessingComplete</span> <span class="p">=</span> <span class="kc">true</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="kd">func</span> <span class="nf">generateReport</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">guard</span> <span class="n">hasValidData</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&#34;No valid data available&#34;</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s">            Analytics Report: </span><span class="si">\(</span><span class="n">datasetName</span><span class="si">)</span><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s">            Analysis ID: </span><span class="si">\(</span><span class="n">analysisId</span><span class="si">)</span><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s">            Sample Size: </span><span class="si">\(</span><span class="n">sampleCount</span><span class="si">)</span><span class="s"> sessions
-</span></span></span><span class="line"><span class="cl"><span class="s">            Average Duration: </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&#34;%.2f&#34;</span><span class="p">,</span> <span class="n">averageSessionDuration</span><span class="si">))</span><span class="s"> seconds
-</span></span></span><span class="line"><span class="cl"><span class="s">            Conversion Rate: </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&#34;%.1f&#34;</span><span class="p">,</span> <span class="n">conversionRate</span> <span class="o">*</span> <span class="mi">100</span><span class="si">))</span><span class="s">%
-</span></span></span><span class="line"><span class="cl"><span class="s">            Processing Status: </span><span class="si">\(</span><span class="n">isProcessingComplete</span> <span class="p">?</span> <span class="s">&#34;Complete&#34;</span> <span class="p">:</span> <span class="s">&#34;In Progress&#34;</span><span class="si">)</span><span class="s">
-</span></span></span><span class="line"><span class="cl"><span class="s">            &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Usage demonstration</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nv">analytics</span> <span class="p">=</span> <span class="n">DataAnalytics</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nv">sessionDurations</span> <span class="p">=</span> <span class="p">[</span><span class="mf">45.2</span><span class="p">,</span> <span class="mf">78.6</span><span class="p">,</span> <span class="mf">123.4</span><span class="p">,</span> <span class="mf">56.8</span><span class="p">,</span> <span class="mf">89.1</span><span class="p">,</span> <span class="mf">134.7</span><span class="p">,</span> <span class="mf">67.3</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">analytics</span><span class="p">.</span><span class="n">processDataset</span><span class="p">(</span><span class="n">sessions</span><span class="p">:</span> <span class="n">sessionDurations</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="bp">print</span><span class="p">(</span><span class="n">analytics</span><span class="p">.</span><span class="n">generateReport</span><span class="p">())</span>
-</span></span></code></pre></div><hr>
+<p>These concepts form the foundation for all data manipulation in Swift, enabling you to write safer, more reliable iOS applications.</p>
+<hr>
 <p><strong><a
   href="../variables-constants/">Previous: Variables and Constants</a></strong> | <strong><a
-  href="../functions/">Next: Swift Functions and Methods</a></strong></p>
+  href="../strings/">Next: String Deep Dive</a></strong></p>
 
 <h2 class="relative group">Additional Resources 
     <div id="additional-resources" class="anchor"></div>
@@ -1509,15 +1098,11 @@
 <li><a
   href="https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html"
     target="_blank"
-  >Swift Language Guide - Types</a></li>
+  >Swift Language Guide - The Basics</a></li>
 <li><a
   href="https://developer.apple.com/documentation/swift"
     target="_blank"
-  >Apple Developer Documentation - Data Types</a></li>
-<li><a
-  href="https://standards.ieee.org/ieee/754/6210/"
-    target="_blank"
-  >IEEE 754 Floating Point Standard</a></li>
+  >Apple Developer Documentation - Swift Types</a></li>
 </ul>
 <p><em>This tutorial is part of a comprehensive Swift programming series designed for developers seeking to master iOS development fundamentals.</em></p>
 
@@ -1731,7 +1316,7 @@
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Swift Fundamentals: Understanding Variables and Constants</span
+                  >De Principiante a Desarrollador iOS | Variables y Constantes</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
@@ -1743,6 +1328,27 @@
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/articles/friendlyswift/004strings/">
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >De Principiante a Desarrollador iOS | Strings: Manipulando texto y soporte unicode</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-09-07T13:00:00-06:00">7 September 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>

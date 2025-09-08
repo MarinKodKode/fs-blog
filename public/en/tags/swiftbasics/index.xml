@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SwiftBasics on Friendly Snippets</title>
+    <link>http://localhost:1313/en/tags/swiftbasics/</link>
+    <description>Recent content in SwiftBasics on Friendly Snippets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>mhernandezmarin00@gmail.com (Friendly Snippets)</managingEditor>
+    <webMaster>mhernandezmarin00@gmail.com (Friendly Snippets)</webMaster>
+    <copyright>© 2025 Friendly Snippets</copyright>
+    <lastBuildDate>Sun, 07 Sep 2025 10:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/en/tags/swiftbasics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>FriendlySwift - De Principiante a Desarrollador iOS | Overview</title>
+      <link>http://localhost:1313/en/articles/friendlyswift/001overview/</link>
+      <pubDate>Sun, 07 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/en/articles/friendlyswift/001overview/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/en/articles/friendlyswift/001overview/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
