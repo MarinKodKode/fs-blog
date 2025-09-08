@@ -4,13 +4,25 @@
 
   <url>
     <loc>http://localhost:1313/articles/</loc>
-    <lastmod>2025-09-07T10:00:00-06:00</lastmod>
+    <lastmod>2025-09-07T12:00:00-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-09-07T10:00:00-06:00</lastmod>
+    <lastmod>2025-09-07T12:00:00-06:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/articles/friendlyswift/003basicdatatypes/</loc>
+    <lastmod>2025-09-07T12:00:00-06:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/articles/friendlyswift/002var_const/</loc>
+    <lastmod>2025-09-07T11:00:00-06:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

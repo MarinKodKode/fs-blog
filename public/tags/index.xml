@@ -9,34 +9,64 @@
     <managingEditor>mhernandezmarin00@gmail.com (Friendly Snippets)</managingEditor>
     <webMaster>mhernandezmarin00@gmail.com (Friendly Snippets)</webMaster>
     <copyright>© 2025 Friendly Snippets</copyright>
-    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Sep 2025 12:00:00 -0600</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Beginner</title>
-      <link>http://localhost:1313/tags/beginner/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <title>Boolean</title>
+      <link>http://localhost:1313/tags/boolean/</link>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 -0600</pubDate>
       <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
-      <guid>http://localhost:1313/tags/beginner/</guid>
+      <guid>http://localhost:1313/tags/boolean/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>IOS</title>
-      <link>http://localhost:1313/tags/ios/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <title>Data Types</title>
+      <link>http://localhost:1313/tags/data-types/</link>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 -0600</pubDate>
       <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
-      <guid>http://localhost:1313/tags/ios/</guid>
+      <guid>http://localhost:1313/tags/data-types/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Programming</title>
-      <link>http://localhost:1313/tags/programming/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <title>Integer</title>
+      <link>http://localhost:1313/tags/integer/</link>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 -0600</pubDate>
       <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
-      <guid>http://localhost:1313/tags/programming/</guid>
+      <guid>http://localhost:1313/tags/integer/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>IOS Development</title>
+      <link>http://localhost:1313/tags/ios-development/</link>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/ios-development/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Programming Fundamentals</title>
+      <link>http://localhost:1313/tags/programming-fundamentals/</link>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/programming-fundamentals/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>String</title>
+      <link>http://localhost:1313/tags/string/</link>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/string/</guid>
       <description></description>
       
     </item>
@@ -44,9 +74,109 @@
     <item>
       <title>Swift</title>
       <link>http://localhost:1313/tags/swift/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 -0600</pubDate>
       <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
       <guid>http://localhost:1313/tags/swift/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Type System</title>
+      <link>http://localhost:1313/tags/type-system/</link>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/type-system/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Constants</title>
+      <link>http://localhost:1313/tags/constants/</link>
+      <pubDate>Sun, 07 Sep 2025 11:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/constants/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Software Engineering</title>
+      <link>http://localhost:1313/tags/software-engineering/</link>
+      <pubDate>Sun, 07 Sep 2025 11:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/software-engineering/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Variables</title>
+      <link>http://localhost:1313/tags/variables/</link>
+      <pubDate>Sun, 07 Sep 2025 11:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/variables/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>FriendlySwift</title>
+      <link>http://localhost:1313/tags/friendlyswift/</link>
+      <pubDate>Sun, 07 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/friendlyswift/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>IOS</title>
+      <link>http://localhost:1313/tags/ios/</link>
+      <pubDate>Sun, 07 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/ios/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>IOSDevelopment</title>
+      <link>http://localhost:1313/tags/iosdevelopment/</link>
+      <pubDate>Sun, 07 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/iosdevelopment/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>LearnSwift</title>
+      <link>http://localhost:1313/tags/learnswift/</link>
+      <pubDate>Sun, 07 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/learnswift/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SwiftBasics</title>
+      <link>http://localhost:1313/tags/swiftbasics/</link>
+      <pubDate>Sun, 07 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/swiftbasics/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>SwiftProgramming</title>
+      <link>http://localhost:1313/tags/swiftprogramming/</link>
+      <pubDate>Sun, 07 Sep 2025 10:00:00 -0600</pubDate>
+      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
+      <guid>http://localhost:1313/tags/swiftprogramming/</guid>
       <description></description>
       
     </item>
@@ -62,11 +192,11 @@
     </item>
     
     <item>
-      <title>IOS Development</title>
-      <link>http://localhost:1313/tags/ios-development/</link>
+      <title>Programming</title>
+      <link>http://localhost:1313/tags/programming/</link>
       <pubDate>Sat, 06 Sep 2025 10:00:00 -0600</pubDate>
       <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
-      <guid>http://localhost:1313/tags/ios-development/</guid>
+      <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
       
     </item>
@@ -77,56 +207,6 @@
       <pubDate>Sat, 06 Sep 2025 10:00:00 -0600</pubDate>
       <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
       <guid>http://localhost:1313/tags/singleton/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>FriendlySwift</title>
-      <link>http://localhost:1313/tags/friendlyswift/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
-      <guid>http://localhost:1313/tags/friendlyswift/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>IOSDevelopment</title>
-      <link>http://localhost:1313/tags/iosdevelopment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
-      <guid>http://localhost:1313/tags/iosdevelopment/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>LearnSwift</title>
-      <link>http://localhost:1313/tags/learnswift/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
-      <guid>http://localhost:1313/tags/learnswift/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SwiftBasics</title>
-      <link>http://localhost:1313/tags/swiftbasics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
-      <guid>http://localhost:1313/tags/swiftbasics/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>SwiftProgramming</title>
-      <link>http://localhost:1313/tags/swiftprogramming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>mhernandezmarin00@gmail.com (Friendly Snippets)</author>
-      <guid>http://localhost:1313/tags/swiftprogramming/</guid>
       <description></description>
       
     </item>
